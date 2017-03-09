@@ -10,7 +10,7 @@
   "keywords": [
     "tool"
   ],
-  "author": "feiyuzi",
+  "author": "qilei",
   "license": "ISC",
   "dependencies": {
     "async": "^2.1.5"
