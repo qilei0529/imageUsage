@@ -19,6 +19,15 @@ program
         require('../command/new')()
     })
 
+program
+    .command('delete')
+    .description('Create a new Search Useage')
+    .alias('d')
+    .action(() => {
+        require('../command/delete')()
+    })
+
+
 program.parse(process.argv)
 
 if(!program.args.length){

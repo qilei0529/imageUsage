@@ -8,3 +8,8 @@
 
 
 	imu -h
+
+
+	imu new
+
+	imu delete

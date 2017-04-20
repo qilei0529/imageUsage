@@ -121,10 +121,10 @@ const create = () => {
         })
 
         let callback = function (){
-            let out_file = path.join(PROJECT_DIR,TMP_DIR , 'metch.js')
+            let out_file = path.join(PROJECT_DIR,TMP_DIR , 'match.js')
             var out_text = JSON.stringify(img_count , null, 2)
             saveFile( out_file, out_text )
-            console.log(chalk.green(  `   Save to ${TMP_DIR}/metch.js`))
+            console.log(chalk.green(  `   Save to ${TMP_DIR}/match.js`))
             console.log(chalk.green(  `\n `))
 
             show(img_count)
