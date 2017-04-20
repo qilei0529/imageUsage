@@ -1,11 +1,13 @@
 {
-  "name": "imageuse",
+  "name": "cli",
   "version": "1.0.0",
-  "description": "just a tool",
+  "description": "a cli tools",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "imu": "bin/scion"
   },
   "keywords": [
     "tool"
@@ -13,6 +15,12 @@
   "author": "qilei",
   "license": "ISC",
   "dependencies": {
-    "async": "^2.1.5"
+    "async": "^2.3.0",
+    "chalk": "^1.1.3",
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.9.0",
+    "mkdirp": "^0.5.1",
+    "sleep": "^5.1.1"
   }
 }
