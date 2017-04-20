@@ -1,7 +1,7 @@
 {
-  "name": "cli",
+  "name": "imu",
   "version": "1.0.0",
-  "description": "a cli tools",
+  "description": "a imu tools",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
