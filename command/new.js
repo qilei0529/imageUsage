@@ -43,6 +43,17 @@ const matchFile = function( files , img_list ){
     })
 }
 
+
+const show = function( list ){
+    let sorts = list.sorts;
+    delete list.sorts
+    for ( var key in list ) {
+        console.log(chalk.yellow(`    ${key} - ${list[key]}`))
+    }
+    console.log(chalk.yellow(`\n    Count: ${sorts.all}`))
+
+}
+
 const create = () => {
     co(function*() {
         const mkdirp = require('mkdirp');
@@ -61,7 +72,6 @@ const create = () => {
         console.log(chalk.green( `\n Start images find \n\n   path: ${item.path}  \n    reg: ${item.reg}` ))
         console.log(chalk.green( `\n Finding... ` ))
         
-        // sleep.sleep(1)
 
         // 查找 到多少张图片 
         let image_stack = util.mapFiles(item.path, item.reg)
@@ -115,15 +125,14 @@ const create = () => {
             var out_text = JSON.stringify(img_count , null, 2)
             saveFile( out_file, out_text )
             console.log(chalk.green(  `   Save to ${TMP_DIR}/metch.js`))
-            console.log(chalk.green(  `\n   delete?`))
+            console.log(chalk.green(  `\n `))
 
+            show(img_count)
         }
 
         util.imgUsage('project', all_file.files, img_list, img_count , callback);
 
-        // 新建一个 文件夹
-        
-        var wait = yield prompt('\n wait: ')
+        var end = yield prompt('')
         process.exit()
     })
 }
