@@ -95,7 +95,7 @@ const create = () => {
         let all_item = {
             path: path.join(PROJECT_DIR),
             reg: /\.js|jsx|css|styl|html/g,
-            exclude: /node_modules|_tmp|images/g
+            exclude: /node_modules|_tmp|images|.git/g
         }
 
         console.log(chalk.green( `\n Start Files find \n\n   path: ${all_item.path}  \n    reg: ${all_item.reg}\n    exc: ${all_item.exclude}` ))
